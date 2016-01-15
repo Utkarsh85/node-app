@@ -18,7 +18,7 @@ apt-get -y install -qq git-core
 install_node() {
   juju-log "Installing node..."
   apt-get -y install -qq build-essential curl
-  wget http://nodejs.org/dist/v0.10.15/node-v0.10.15.tar.gz && tar -xvzf node-v0.10.15.tar.gz && cd node-v0.10.15 && ./configure && sudo make && sudo make install
+  wget https://nodejs.org/dist/v4.2.4/node-v4.2.4.tar.gz && tar -xvzf node-v4.2.4.tar.gz && cd node-v4.2.4 && ./configure && sudo make && sudo make install
   npm install express -g
 }
 [[ -x /usr/bin/node ]] || install_node
